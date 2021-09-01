@@ -46,8 +46,7 @@ body{
 
 .main__nav--logo{
     font-size: 2.2rem;    
-    padding: 0 30px;
-    
+    padding: 0 30px;    
 }
 
 .main__nav--links{
@@ -59,9 +58,7 @@ body{
 .link{
     text-decoration: none;
     color: var(--text-color);
-    font-size: 1rem;
-    
-    
+    font-size: 1rem; 
 }
 
 .link::after{
@@ -97,9 +94,7 @@ body{
     z-index: 999;
 }
 
-.mapa__peru img{
-    padding: 20px;
-}
+.mapa__peru img{ padding: 20px;}
 
 .mapa__peru span{
     display: flex;
@@ -117,9 +112,8 @@ body{
     height: 400px;  
     
 }
-.nav__hamburger{
-    display: none;
-}
+.nav__hamburger{ display: none;}
+
 .main__welcome{
     position: relative;
     display: flex;
@@ -150,20 +144,18 @@ body{
     z-index: 999;
     text-decoration: none;
     font-size: 20px;
-    color: var(--text-color);
-    background-color: var(--backgroung-alter);
+    color: var(--background);
+    background-color: transparent;
+    border: 3px solid #ffe600;
     padding: 12px 30px; 
     border-radius: 10px;
     letter-spacing: normal;
     transition: all .3s;
 }
-.btn__more:hover{
-    
-    box-shadow: 2px 2px 10px var(--backgroung-alter);
+.btn__more:hover{    
+    box-shadow: 2px 2px 10px var(--background);
     transition: all .5s;
 }
-
-
 
 /* ---------------------------------------------- */
 
@@ -185,10 +177,9 @@ body{
     font-size: 1.8rem;
     font-family: var(--font__text-title);
     text-transform: uppercase;
-    color: var(--text-color-alter);
-    
-    
+    color: var(--text-color-alter);    
 }
+
 .history__description{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -208,8 +199,7 @@ body{
     object-fit: cover;
     border-radius: 5px;
     padding: 10px;
-    box-shadow: 20px 20px 50px rgba(0,0,0,0.5);
-    
+    box-shadow: 20px 20px 50px rgba(0,0,0,0.5);    
 }
 
 .gallery__item--1{
@@ -246,23 +236,52 @@ body{
     padding-left: 10px;    
     border-top: 1px solid var(--text-color-alter);
     text-align: justify;    
-    align-items: center;
-    
+    align-items: center;    
 }
 /* ---------------------------------------------------------------- */
 
-
-.section_ciudad{   
-    height: 100vh;
-
-    background-image: url(/img/piura_desdeArriba.jpg) ;
-    background-repeat: no-repeat;
-    background-size: cover;
+.pictures__ciudad{      
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    place-items: center;
+    gap: 30px;
+    padding: 0 50px;  
+    margin-bottom: 35px;  
 }
+
+.card__place{    
+    width: 350px;
+    height: 300px;
+    margin: 20px;
+    box-shadow: var(--glass__box-shadow);    
+    background-color: var(--glass__background);
+    border-radius: 10px;    
+}
+
+.card__place img{
+    width: inherit;
+    height: inherit;
+    padding: 1rem;
+    object-fit: cover;    
+}
+
+.card__place p{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: var(--text-color-alter) ;
+    width: 200px;
+    padding: 8px;
+    margin-top: 5px;
+    border-radius: 20px;    
+}
+
+/* ---------------------------------------------------------------- */
 .section_provincias{
     height: 200vh;
 
-    background-color: #54bedf;
+    /* background-color: #54bedf; */
 }
 /* ---------------------------------------------------------------- */
 @media screen and ( max-width: 850px){  
@@ -326,6 +345,16 @@ body{
         border: none;
     }
 
+    .pictures__ciudad{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .card__place{
+        width: 100%;
+        object-fit: cover;
+    }
+
 }
 
 @media screen and (max-width: 450px) {
@@ -353,4 +382,8 @@ body{
         position: relative;
         right: 0;
     }    
+    
+    .card__place p{
+        padding: 5px;
+    }
 } 
